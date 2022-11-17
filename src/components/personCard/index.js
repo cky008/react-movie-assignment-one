@@ -42,16 +42,17 @@ export default function PersonCard({ person }) {
           </Grid>
         </Grid>
         <Typography variant="body" color="text.secondary">
-          {person.known_for[0].original_title 
+          { }
+          {/* {person.known_for
             ? (person.known_for[0].original_title) 
-            : (person.known_for[0].original_name)}
+            : {(person.known_for[0].original_name)}}
           {person.known_for[1].original_title 
             ? (", " + person.known_for[1].original_title) 
-            : (person.known_for[1].original_name)}
+            : (person.known_for[1].original_name)} */}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <Link style={{ textDecoration:'none'}} to={`/persons/${person.id}` }>
+        <Link style={{ textDecoration:'none'}} to={`/person/${person.id}` }>
           <Button variant="outlined" size="medium" color="primary">
             More Info ...
           </Button>

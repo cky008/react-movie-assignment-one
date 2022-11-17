@@ -7,7 +7,6 @@ Name: Kaiyu Chen
 [A brief statement on the content of this repository.]
 
 ### Features.
-[ A bullet-point list of the __new features__ you added to the Movies Fan app (and any modifications to existing features) .]
 
 + Change the style of the site header:  
   (Home Favourites Upcoming Option4)  
@@ -15,7 +14,7 @@ Name: Kaiyu Chen
   (Home Movies[Favourites Upcoming] People)  
   [] is a drop-down menu.
 + Add the People page
-+ Feature 3
++ Add the Person Details Page
 + etc
 + etc
 
@@ -27,29 +26,24 @@ Name: Kaiyu Chen
 
 [ List the __additional__ TMDB endpoints used, giving the description and pathname for each one.] 
 
-+ Discover list of popular people - person
++ Discover list of popular people (getPersonPopular) - person
++ Get specific person's basic info (getPerson) - person/:id
++ Get specific person's images (getPersonImages) - person/:id
++ Get specific person's Combined Credit (getPersonCombinedCredit) - person/:id
++ Get specific person's Movie Credit (getPersonMovieCredit) - not used (changed into use the getPersonCombinedCredit)
 
-e.g.
-+ Discover list of movies - discover/movie
-+ Movie details - movie/:id
-+ Movie genres = /genre/movie/list
 
 ## Routing.
 
-+ /people - displays all popular people.
++ /person - displays all popular people.
++ /person/:id - displays specific person's info.
 
-[ List the __new routes__ supported by your app and state the associated page.]
-
-+ /blogs - displays all published blogs.
-+ /blogs/:id - displays a particular blog.
-+ /blogs/:id/comments - detail view of a particular blog and its comments.
-+ etc.
 
 [If relevant, state what aspects of your app are protected (i.e. require authentication) and what is public.]
 
 ## Independent learning (If relevant).
 
-### Deploy to AWS Amplify 
+### Auto-Deploy to AWS Amplify 
 Just follow the instructions from https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/module-one/
 
 Itemize the technologies/techniques you researched independently and adopted in your project, 

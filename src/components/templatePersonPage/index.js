@@ -5,6 +5,7 @@ import ImageListItem from "@mui/material/ImageListItem";
 import { getPersonImages } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
+import PersonDetailInfo from "../personDetailInfo";
 
 const TemplatePersonPage = ({ person, children }) => {
 
@@ -20,7 +21,8 @@ const TemplatePersonPage = ({ person, children }) => {
   if (isError) {
     return <h1>{error.message}</h1>;
   }
-  const images = data.posters 
+
+  const image = data.profiles[0] 
 
   return (
     <>
@@ -33,16 +35,15 @@ const TemplatePersonPage = ({ person, children }) => {
           }}>
             <ImageList 
                 cols={1}>
-                {images.map((image) => (
-                    <ImageListItem key={image.file_path} cols={1}>
+                <ImageListItem key={image.file_path} cols={1}>
                     <img
                         src={`https://image.tmdb.org/t/p/w500/${image.file_path}`}
                         alt={image.poster_path}
                     />
                     </ImageListItem>
-                ))}
             </ImageList>
           </div>
+          <PersonDetailInfo person={person} />
         </Grid>
 
         <Grid item xs={9}>
@@ -53,4 +54,4 @@ const TemplatePersonPage = ({ person, children }) => {
   );
 };
 
-export default TemplatePersonePage;
+export default TemplatePersonPage;

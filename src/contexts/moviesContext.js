@@ -29,7 +29,7 @@ const MoviesContextProvider = (props) => {
     }
     setToWatch(newToWatch)
   };
-  console.log(toWatch)
+  // console.log(toWatch)
 
   // We will use this function in a later section
   const removeFromFavorites = (movie) => {

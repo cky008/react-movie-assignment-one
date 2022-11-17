@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom';
 import MovieDetails from "../components/movieDetails/";
 import PageTemplate from "../components/templateMoviePage";
 import { getMovie } from '../api/tmdb-api'
+import { getMovieCredits } from '../api/tmdb-api'
 import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
-// import useMovie from "../hooks/useMovie";   Redundant
 
 const MoviePage = (props) => {
   const { id } = useParams();
@@ -14,6 +14,11 @@ const MoviePage = (props) => {
     getMovie
   );
 
+  const {data: casts, error2, isLoading2, isError2 } = useQuery(
+    ["casts", { id: id }],
+    getMovieCredits
+  );
+  
   if (isLoading) {
     return <Spinner />;
   }
@@ -21,12 +26,20 @@ const MoviePage = (props) => {
   if (isError) {
     return <h1>{error.message}</h1>;
   }
+
+  if (isLoading2) {
+    return <Spinner />
+  }
+  if (isError2) {
+    return <h1>{error2.message}</h1>
+  }
+
   return (
     <>
       {movie ? (
         <>
           <PageTemplate movie={movie}>
-            <MovieDetails movie={movie} />
+            <MovieDetails movie={movie} casts={casts}/> 
           </PageTemplate>
         </>
       ) : (

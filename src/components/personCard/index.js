@@ -13,7 +13,7 @@ import img from '../../images/film-poster-placeholder.png'
 
 export default function PersonCard({ person }) {
 
-  console.log(person.known_for)
+  // console.log(person.known_for)
 
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -42,13 +42,6 @@ export default function PersonCard({ person }) {
           </Grid>
         </Grid>
         <Typography variant="body" color="text.secondary">
-          { }
-          {/* {person.known_for
-            ? (person.known_for[0].original_title) 
-            : {(person.known_for[0].original_name)}}
-          {person.known_for[1].original_title 
-            ? (", " + person.known_for[1].original_title) 
-            : (person.known_for[1].original_name)} */}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>

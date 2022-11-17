@@ -15,7 +15,7 @@ Name: Kaiyu Chen
   [] is a drop-down menu.
 + Add the People page
 + Add the Person Details Page
-+ etc
++ Add Top Billed Cast Card on Movie Detail Page
 + etc
 
 ## Setup requirements.
@@ -24,13 +24,11 @@ Name: Kaiyu Chen
 
 ## API endpoints.
 
-[ List the __additional__ TMDB endpoints used, giving the description and pathname for each one.] 
-
 + Discover list of popular people (getPersonPopular) - person
 + Get specific person's basic info (getPerson) - person/:id
 + Get specific person's images (getPersonImages) - person/:id
 + Get specific person's Combined Credit (getPersonCombinedCredit) - person/:id
-+ Get specific person's Movie Credit (getPersonMovieCredit) - not used (changed into use the getPersonCombinedCredit)
++ Get specific movie's Cast Credit (getMovieCredits) - movies/:id
 
 
 ## Routing.
@@ -45,6 +43,9 @@ Name: Kaiyu Chen
 
 ### Auto-Deploy to AWS Amplify 
 Just follow the instructions from https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/module-one/
+
+### Use the ImageListItemBar Componment to make Known For for each person
+https://mui.com/zh/material-ui/api/image-list-item-bar/
 
 Itemize the technologies/techniques you researched independently and adopted in your project, 
 i.e. aspects not covered in the lectures/labs. Include the source code filenames that illustrate these 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Drawer from "@mui/material/Drawer";
 import MovieReviews from "../movieReviews"
+import MovieCredits from "../movieCredits";
 import Chip from "@mui/material/Chip";
 import Paper from "@mui/material/Paper";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
@@ -21,7 +22,7 @@ const root = {
 };
 const chip = { margin: 0.5 };
 
-const MovieDetails = ({ movie }) => {  // Don't miss this!
+const MovieDetails = ({ movie , casts }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   return (
     <>
@@ -71,6 +72,8 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
           </li>
         ))}
       </Paper>
+      <br/>
+      <MovieCredits castsList = {casts}/>
       <Fab
         color="secondary"
         variant="extended"

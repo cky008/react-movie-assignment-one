@@ -13,10 +13,11 @@ Name: Kaiyu Chen
   to  
   (Home Movies[Favourites Upcoming] People)  
   [] is a drop-down menu.
-+ Add the People page
-+ Add the Person Details Page
-+ Add Top Billed Cast Card on Movie Detail Page
++ Add the People page.
++ Add the Person Details Page.
++ Add Top Billed Cast Card on Movie Detail Page.
 + Full Caching support.
++ Full pagination support.
 + etc
 
 ## Setup requirements.
@@ -30,7 +31,7 @@ Name: Kaiyu Chen
 + Get specific person's images (getPersonImages) - person/:id
 + Get specific person's Combined Credit (getPersonCombinedCredit) - person/:id
 + Get specific movie's Cast Credit (getMovieCredits) - movies/:id
-
++ The api for List Pages now all have a parameter 'page' for Pagination
 
 ## Routing.
 
@@ -45,8 +46,13 @@ Name: Kaiyu Chen
 ### Auto-Deploy to AWS Amplify 
 Just follow the instructions from https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/module-one/
 
-### Use the ImageListItemBar Componment to make Known For for each person
+### Use the ImageListItemBar, Paper, useMediaQuery, useTheme, etc Componments from mui
 https://mui.com/zh/material-ui/api/image-list-item-bar/
+https://mui.com/zh/material-ui/react-paper/
+https://mui.com/system/styles/advanced/
+
+### Pagination
+https://mui.com/zh/material-ui/react-pagination/
 
 Itemize the technologies/techniques you researched independently and adopted in your project, 
 i.e. aspects not covered in the lectures/labs. Include the source code filenames that illustrate these 

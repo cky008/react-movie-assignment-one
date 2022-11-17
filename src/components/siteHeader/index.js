@@ -27,7 +27,7 @@ const SiteHeader = ({ history }) => {
     { label: "Home", path: "/page1" },
     { label: "Favorites", path: "/movies/favorites/page1" },
     { label: "Upcoming", path: "/movies/upcoming/page1" },
-    { label: "People", path: "/person" },
+    { label: "People", path: "/person/page1" },
   ];
 
   const moviesOptions  = [
@@ -132,7 +132,7 @@ const SiteHeader = ({ history }) => {
                   </Menu>
                   <Button 
                     key="People"
-                    color="inherit" onClick={() => handleMenuSelect("/person")}
+                    color="inherit" onClick={() => handleMenuSelect("/person/page1")}
                     >
                       People
                   </Button>

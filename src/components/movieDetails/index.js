@@ -32,7 +32,7 @@ const MovieDetails = ({ movie , casts }) => {
     ["reviews", { id: id }],
     getMovieReviews
   );
-  console.log(reviews)
+  // console.log(reviews)
 
   if (isLoading) {
     return <Spinner />;

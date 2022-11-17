@@ -10,6 +10,9 @@ import StarRate from "@mui/icons-material/StarRate";
 import NavigationIcon from "@mui/icons-material/Navigation";
 import Fab from "@mui/material/Fab";
 import Typography from "@mui/material/Typography";
+import { getMovieReviews } from "../../api/tmdb-api";import { useQuery } from "react-query";
+import Spinner from '../spinner'
+import { useParams } from 'react-router-dom';
 
 
 const root = {
@@ -24,6 +27,21 @@ const chip = { margin: 0.5 };
 
 const MovieDetails = ({ movie , casts }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const { id } = useParams();
+  const { data: reviews, error, isLoading, isError } = useQuery(
+    ["reviews", { id: id }],
+    getMovieReviews
+  );
+  console.log(reviews)
+
+  if (isLoading) {
+    return <Spinner />;
+  }
+
+  if (isError) {
+    return <h1>{error.message}</h1>;
+  }
+
   return (
     <>
       <Typography variant="h5" component="h3">
@@ -88,7 +106,7 @@ const MovieDetails = ({ movie , casts }) => {
         Reviews
       </Fab>
       <Drawer anchor="top" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-        <MovieReviews movie={movie} />
+        <MovieReviews movie={movie} reviews={reviews} />
       </Drawer>
       </>
   );

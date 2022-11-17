@@ -20,8 +20,10 @@ Name: Kaiyu Chen
 + Full pagination support.
 + Several extensive data hyperlinkings for individual persons(Acting Movies) and for individual movies(Top Billed Cast)
 + Several parameterized URLs for individual person page(like individual movie page) and for every list pages(home, upcoming and people/person)
++ New lanuage filter.
++ 
 + Other further features are mentioned in the [Independent learning](#independent-learning-if-relevant) part.
-+ etc
+
 
 ## Setup requirements.
 

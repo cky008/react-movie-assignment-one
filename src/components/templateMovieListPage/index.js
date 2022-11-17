@@ -12,9 +12,18 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 function MovieListPageTemplate({ movies, title, action, page, total_pages, pagination }) {
   const [nameFilter, setNameFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("0");
+  const [languageFilter, setLanguageFilter] = useState("All");
   const genreId = Number(genreFilter);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const languages = ["All"];
+  movies.map((l) => {
+  if(!languages.includes(l.original_language)){
+      languages.push(l.original_language)
+    }
+    return undefined;
+  })
 
   let displayedMovies = movies
     .filter((m) => {
@@ -22,10 +31,14 @@ function MovieListPageTemplate({ movies, title, action, page, total_pages, pagin
     })
     .filter((m) => {
       return genreId > 0 ? m.genre_ids.includes(genreId) : true;
+    })
+    .filter((m) => {
+      return languageFilter === "All" ? true : m.original_language === languageFilter;
     });
 
   const handleChange = (type, value) => {
     if (type === "name") setNameFilter(value);
+    else if (type === "language") setLanguageFilter(value);
     else setGenreFilter(value);
   };
 
@@ -50,6 +63,8 @@ function MovieListPageTemplate({ movies, title, action, page, total_pages, pagin
             onUserInput={handleChange}
             titleFilter={nameFilter}
             genreFilter={genreFilter}
+            languageFilter={languageFilter}
+            languages={languages}
           />
         </Grid>
         {(page === "/movies/favorites") ? (

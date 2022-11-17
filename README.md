@@ -16,6 +16,7 @@ Name: Kaiyu Chen
 + Add the People page
 + Add the Person Details Page
 + Add Top Billed Cast Card on Movie Detail Page
++ Full Caching support.
 + etc
 
 ## Setup requirements.

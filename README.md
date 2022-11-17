@@ -18,6 +18,9 @@ Name: Kaiyu Chen
 + Add Top Billed Cast Card on Movie Detail Page.
 + Full Caching support.
 + Full pagination support.
++ Several extensive data hyperlinkings for individual persons(Acting Movies) and for individual movies(Top Billed Cast)
++ Several parameterized URLs for individual person page(like individual movie page) and for every list pages(home, upcoming and people/person)
++ Other further features are mentioned in the [Independent learning](#independent-learning-if-relevant) part.
 + etc
 
 ## Setup requirements.
@@ -31,7 +34,7 @@ Name: Kaiyu Chen
 + Get specific person's images (getPersonImages) - person/:id
 + Get specific person's Combined Credit (getPersonCombinedCredit) - person/:id
 + Get specific movie's Cast Credit (getMovieCredits) - movies/:id
-+ The api for List Pages now all have a parameter 'page' for Pagination
++ The api for List Pages now all have a parameter 'page' for Pagination (parameterized endpoint)
 
 ## Routing.
 

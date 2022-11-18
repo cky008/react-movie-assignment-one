@@ -59,12 +59,13 @@ Name: Kaiyu Chen
 ### Auto-Deploy to AWS Amplify 
 https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/module-one/ . 
 
-### Use the ImageListItemBar, Paper, useMediaQuery, Theme, CssBaseline, Icon etc Componments from mui 
+### Use the ImageListItemBar, Paper, useMediaQuery, Theme, CssBaseline, Icon and etc. Componments from mui 
 https://mui.com/zh/material-ui/api/image-list-item-bar/  
 https://mui.com/zh/material-ui/react-paper/  
 https://mui.com/system/styles/advanced/  
 https://mui.com/material-ui/react-css-baseline/  
 https://mui.com/material-ui/material-icons/  
+etc, ...
 
 ### Pagination 
 https://mui.com/zh/material-ui/react-pagination/  

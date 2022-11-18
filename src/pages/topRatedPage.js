@@ -11,7 +11,7 @@ const TopRatedPage = (props) => {
 
   const { pagination } = useParams();
 
-  const {  data, error, isLoading, isError }  = useQuery(["discoverUpcoming", pagination], getTopRatedMovies)
+  const {  data, error, isLoading, isError }  = useQuery(["discoverTopRated", pagination], getTopRatedMovies)
 
   if (isLoading) {
     return <Spinner />

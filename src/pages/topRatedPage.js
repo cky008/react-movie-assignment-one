@@ -22,12 +22,15 @@ const TopRatedPage = (props) => {
   }  
   const movies = data.results;
 
+  const favorites = movies.filter(m => m.favorite)
+  localStorage.setItem('favorites', JSON.stringify(favorites))
+
   return (
     <PageTemplate
       title='Top Rated Movies'
       movies={movies}
       action={(movie) => {
-        return <AddToWatchIcon movie={movie} />
+        return <AddToFavoritesIcon movie={movie} />
       }}
       page="/movies/upcoming"
       pagination={pagination}

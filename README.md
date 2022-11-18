@@ -7,10 +7,10 @@ Name: Kaiyu Chen
 This is a web application based on TMDB API, React, MUI, Firebase and AWS Amplify. It is designed to provide information on movies, TV series and actors through a simple web page. It also supports authentication. This is assignment one for the module Web App Development 2.
 
 ### Video Demo  
-[Youtube](https://youtu.be/qZVX9r8Ygm0) or [Onedrive](https://1574666-my.sharepoint.com/:v:/g/personal/fa2nica_1574666_onmicrosoft_com/EfYuBTdPG-RJiZWB4ckh8U8BgnrzhY1ILhYbQCUcryANiA?e=x67IXa)
+[Youtube](https://youtu.be/qZVX9r8Ygm0) , [OneDrive](https://1574666-my.sharepoint.com/:v:/g/personal/fa2nica_1574666_onmicrosoft_com/EfYuBTdPG-RJiZWB4ckh8U8BgnrzhY1ILhYbQCUcryANiA?e=x67IXa) or [bilibili](https://www.bilibili.com/video/BV1A3411f7BN/)
 
 ### Online Demo
-via [aws amplify](https://main.d1ik5o6ucwnt3f.amplifyapp.com/page1)
+via [aws amplify](https://main.d1ik5o6ucwnt3f.amplifyapp.com/page1) or [fa2nica.tk](fa2nica.tk)
 
 ### Features.
 
@@ -36,7 +36,8 @@ via [aws amplify](https://main.d1ik5o6ucwnt3f.amplifyapp.com/page1)
 
 ## Setup requirements.  
 
-### TMDB API 
+### TMDB API  
+
 In order to run cypress tests you must first create a `.env` file in the project base folder.  
 The contents should include the following.  
 ```
@@ -44,6 +45,7 @@ REACT_APP_TMDB_KEY=<YOUR_TMDB_API_KEY>
 FAST_REFRESH=false
 ```
 ### Build  
+
 In order to install needed package,you need run `npm install` first.
 After all done, you can use
 `npm start`
@@ -54,6 +56,15 @@ http://localhost:3000/
 
 ## API endpoints.
 
+Old 
++ Discover list of movies - discover/movie
++ Movie details - movie/:id
++ Get the user reviews for a movie - /movie/:id/reviews
++ Get the images belong to a movie - /movie/:id/images
++ Movie genres - /genre/movie/list
++ Get a list of upcoming movies - /movie/upcoming
+
+New 
 + Discover list of top rated movies (getTopRatedMovies) - movies/toprated 
 + Discover list of popular people (getPersonPopular) - person 
 + Get specific person's basic info (getPerson) - person/:id 
@@ -62,8 +73,17 @@ http://localhost:3000/
 + Get specific movie's Cast Credit (getMovieCredits) - movies/:id 
 + The api for List Pages now all have a parameter 'page' for Pagination   
 
-## Routing.
+## Routing.  
 
+Old 
++ / - displays discover movies page.
++ /movies/favourite - displays user's favourite movies.
++ /movies/upcoming - displays upcoming movies.
++ /movies/:id - displays a particular movie's detail.
++ /reviews/form - User can write reviews for their favorite movies.
++ /reviews/:id - displays reviews about a movie.
+
+New 
 + /movies/toprated - displays all movies in rating ranks.
 + /person - displays all popular people.
 + /person/:id - displays specific person's info.

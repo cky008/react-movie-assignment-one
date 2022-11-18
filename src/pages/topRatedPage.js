@@ -32,7 +32,7 @@ const TopRatedPage = (props) => {
       action={(movie) => {
         return <AddToFavoritesIcon movie={movie} />
       }}
-      page="/movies/upcoming"
+      page="/movies/toprated"
       pagination={pagination}
       total_pages={data.total_pages}
     />

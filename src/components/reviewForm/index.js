@@ -69,7 +69,7 @@ const styles = {
 
     const handleSnackClose = (event) => {
         setOpen(false);
-        navigate("/movies/favorites");
+        navigate("/movies/favorites/page1");
       };
   
     const defaultValues = {

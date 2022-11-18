@@ -31,13 +31,14 @@ const SiteHeader = ({ history }) => {
     { label: "Home", path: "/page1" },
     { label: "Favorites", path: "/movies/favorites/page1" },
     { label: "Upcoming", path: "/movies/upcoming/page1" },
+    { label: "Top Rated", path: "/movies/toprated/page1" },
     { label: "People", path: "/person/page1" },
-    { label: "Log in", path: "/login" },
   ];
 
   const moviesOptions  = [
     { label: "Favorites", path: "/movies/favorites/page1" },
     { label: "Upcoming", path: "/movies/upcoming/page1" },
+    { label: "Top Rated", path: "/movies/toprated/page1" },
   ];
 
   const handleMenuSelect = (pageURL) => {
@@ -101,6 +102,23 @@ const SiteHeader = ({ history }) => {
                       {opt.label}
                     </MenuItem>
                   ))}
+                    { (user)? 
+                      <>
+                        <MenuItem 
+                        key="Log out"
+                        color="inherit" onClick={() => handleMenuSelect("/login")}
+                        >
+                          Log out
+                        </MenuItem>
+                      </>
+                      :
+                      <MenuItem 
+                      key="Log in"
+                      color="inherit" onClick={() => handleMenuSelect("/login")}
+                      >
+                        Log in
+                      </MenuItem>
+                   }
                 </Menu>
               </>
             ) : (

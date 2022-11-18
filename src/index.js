@@ -16,6 +16,7 @@ import PersonDetailsPage from './pages/personDetailsPage'
 import LoginPage from "./pages/loginPage";
 import RegisterPage from "./pages/registerPage";
 import ResetPage from "./pages/resetPage";
+import TopRatedPage from "./pages/topRatedPage";
 
 
 const queryClient = new QueryClient({
@@ -38,6 +39,7 @@ const App = () => {
             <Route path="/reviews/form" element={ <AddMovieReviewPage /> } />
             <Route exact path="/movies/favorites/page:pagination" element={<FavoriteMoviesPage />} />
             <Route exact path="/movies/upcoming/page:pagination" element={<UpcomingMoviesPage />} />
+            <Route exact path="/movies/toprated/page:pagination" element={<TopRatedPage />} />
             <Route path="/movies/:id" element={<MoviePage />} />
             <Route path="/page:pagination" element={<HomePage />} />
             <Route path="/person/page:pagination" element={ <PersonPage/> } />

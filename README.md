@@ -13,6 +13,7 @@ Name: Kaiyu Chen
   to  
   (Home Movies[Favourites Upcoming] People)  
   [] is a drop-down menu.  
++ Add the Top Rated Movies Page.
 + Add the People page.  
 + Add the Person Details Page.  
 + Add Top Billed Cast Card on Movie Detail Page.  
@@ -22,7 +23,7 @@ Name: Kaiyu Chen
 + Several parameterized URLs for individual person page(like individual movie page) and for every list pages(home, upcoming and people/person).  
 + New language filter.  
 + Add Firbase Authentication for Log in/Sign Up/Reset and each header.  
-+ Auto-Deploy to [AWS Amplify](!https://main.d1ik5o6ucwnt3f.amplifyapp.com/page1).  
++ Auto-Deploy to [AWS Amplify](https://main.d1ik5o6ucwnt3f.amplifyapp.com/page1).  
 + Other further learning parts are mentioned in the [Independent learning](#independent-learning-if-relevant) part.  
 
 
@@ -32,6 +33,7 @@ Name: Kaiyu Chen
 
 ## API endpoints.
 
++ Discover list of top rated movies (getTopRatedMovies) - movies/toprated 
 + Discover list of popular people (getPersonPopular) - person 
 + Get specific person's basic info (getPerson) - person/:id 
 + Get specific person's images (getPersonImages) - person/:id 
@@ -41,11 +43,13 @@ Name: Kaiyu Chen
 
 ## Routing.
 
++ /movies/toprated - displays all movies in rating ranks.
 + /person - displays all popular people.
 + /person/:id - displays specific person's info.
 + /register - for user sign up.
 + /login - for user log in/sign in.
 + /reset - for user reset their password.
+
 
 
 [If relevant, state what aspects of your app are protected (i.e. require authentication) and what is public.]

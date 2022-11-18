@@ -4,7 +4,13 @@ Name: Kaiyu Chen
 
 ## Overview.
 
-[A brief statement on the content of this repository.]
+This is a web application based on TMDB API, React, MUI, Firebase and AWS Amplify. It is designed to provide information on movies, TV series and actors through a simple web page. It also supports authentication. This is assignment one for the module Web App Development 2.
+
+### Video Demo  
+[Youtube](https://youtu.be/qZVX9r8Ygm0) or [Onedrive](https://1574666-my.sharepoint.com/:v:/g/personal/fa2nica_1574666_onmicrosoft_com/EfYuBTdPG-RJiZWB4ckh8U8BgnrzhY1ILhYbQCUcryANiA?e=x67IXa)
+
+### Online Demo
+via [aws amplify](https://main.d1ik5o6ucwnt3f.amplifyapp.com/page1)
 
 ### Features.
 
@@ -17,19 +23,34 @@ Name: Kaiyu Chen
 + Add the People page.  
 + Add the Person Details Page.  
 + Add Top Billed Cast Card on Movie Detail Page.  
++ Some new [endpoints](#api-endpoints).
 + Full Caching support.  
 + Full pagination support.  
 + Several extensive data hyperlinkings for individual persons(Acting Movies) and for individual movies(Top Billed Cast).  
 + Several parameterized URLs for individual person page(like individual movie page) and for every list pages(home, upcoming and people/person).  
 + New language filter.  
-+ Add Firbase Authentication for Log in/Sign Up/Reset and each header.  
++ Add Firebase Authentication for Log in/Sign Up/Reset and each header.  
 + Auto-Deploy to [AWS Amplify](https://main.d1ik5o6ucwnt3f.amplifyapp.com/page1).  
 + Other further learning parts are mentioned in the [Independent learning](#independent-learning-if-relevant) part.  
 
 
 ## Setup requirements.  
 
-[ Outline any non-standard setup steps necessary to run your app locally after cloning the repo.].   
+### TMDB API 
+In order to run cypress tests you must first create a `.env` file in the project base folder.  
+The contents should include the following.  
+```
+REACT_APP_TMDB_KEY=<YOUR_TMDB_API_KEY>
+FAST_REFRESH=false
+```
+### Build  
+In order to install needed package,you need run `npm install` first.
+After all done, you can use
+`npm start`
+to start the server, then you can access the web page by
+```
+http://localhost:3000/
+```
 
 ## API endpoints.
 
@@ -51,9 +72,6 @@ Name: Kaiyu Chen
 + /reset - for user reset their password.
 
 
-
-[If relevant, state what aspects of your app are protected (i.e. require authentication) and what is public.]
-
 ## Independent learning (If relevant).
 
 ### Auto-Deploy to AWS Amplify 
@@ -70,10 +88,5 @@ etc, ...
 ### Pagination 
 https://mui.com/zh/material-ui/react-pagination/  
 
-### Firbase Authentication
+### Firebase Authentication
 https://firebase.google.com/docs/auth/where-to-start?authuser=0
-
-Itemize the technologies/techniques you researched independently and adopted in your project, 
-i.e. aspects not covered in the lectures/labs. Include the source code filenames that illustrate these 
-(we do not require code excerpts) and provide references to the online resources that helped you (articles/blogs).
-

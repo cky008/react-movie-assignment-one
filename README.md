@@ -11,6 +11,7 @@ This is a web application based on TMDB API, React, MUI, Firebase and AWS Amplif
 
 ### Online Demo
 via [aws amplify](https://main.d1ik5o6ucwnt3f.amplifyapp.com/page1) or [fa2nica.tk](fa2nica.tk)
+this two links is no longer supported, to visit online demo please visit online demo via [Github](https://cky008.github.io/agile-movie-assignment-one/)
 
 ### Features.
 
